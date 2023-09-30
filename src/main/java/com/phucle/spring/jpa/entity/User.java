@@ -21,7 +21,6 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    
     private String username;
     private String password;
     
@@ -32,7 +31,6 @@ public class User {
         inverseJoinColumns = @JoinColumn(name = "role_id")
     )
     private List<Role> roles;
-    
     @ManyToOne
     @JoinColumn(name = "department_id")
     private Department department;
